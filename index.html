@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nikah Match — Matrimonial Service</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Nikah<span>Match</span></div>
+  <nav><a href="#how">How it works</a><a href="#privacy">Privacy</a><a class="btn small" href="#register">Register</a><a href="#login">Login</a></nav>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <p class="eyebrow">PRIVATE • RESPECTFUL • MATCH-FOCUSED</p>
+    <h1>Find a suitable Nikah match with privacy at the center.</h1>
+    <p class="lead">Create your matrimonial profile, pay the registration fee, and receive suitable matches. Your CNIC and phone number remain private and are visible only to authorized administrators.</p>
+    <div class="actions"><a class="btn" href="#register">Create Profile</a><a class="btn ghost" href="#how">How it works</a></div>
+  </div>
+  <div class="hero-card">
+    <div class="avatar">NM</div>
+    <h3>Privacy-first matching</h3>
+    <p>Public profiles show only normal matrimonial information. Sensitive contact details stay in the admin area.</p>
+    <div class="pill">❤️ Like suitable profiles</div>
+  </div>
+</section>
+
+<section id="how" class="section">
+  <p class="eyebrow">SIMPLE PROCESS</p><h2>How it works</h2>
+  <div class="grid three">
+    <article><b>01</b><h3>Register</h3><p>Enter your matrimonial information and upload a profile picture.</p></article>
+    <article><b>02</b><h3>Pay & verify</h3><p>Pay the registration/service fee. Account activation happens after payment verification.</p></article>
+    <article><b>03</b><h3>Like matches</h3><p>Browse approved profiles and like suitable matches. Admin can manage mutual matches and contact sharing.</p></article>
+  </div>
+</section>
+
+<section id="register" class="section panel">
+  <div><p class="eyebrow">REGISTRATION</p><h2>Create your profile</h2><p>Public information is separated from private information.</p></div>
+  <form id="registrationForm">
+    <div class="grid two">
+      <label>Full name<input name="name" required></label>
+      <label>Gender<select name="gender" required><option value="">Select</option><option>Male</option><option>Female</option></select></label>
+      <label>Date of birth<input name="dob" type="date" required></label>
+      <label>City<input name="city" required></label>
+      <label>Education<input name="education" required></label>
+      <label>Profession<input name="profession"></label>
+      <label>Height<input name="height" placeholder="e.g. 5 ft 7 in"></label>
+      <label>Marital status<select name="marital_status"><option>Never married</option><option>Divorced</option><option>Widowed</option></select></label>
+    </div>
+    <label>Basic family information<textarea name="family_info"></textarea></label>
+    <label>What you are looking for<textarea name="preferences" placeholder="Age range, city preference, education, etc."></textarea></label>
+    <hr>
+    <h3>Private information — Admin only</h3>
+    <div class="grid two">
+      <label>CNIC<input name="cnic" placeholder="XXXXX-XXXXXXX-X" autocomplete="off"></label>
+      <label>Phone number<input name="phone" autocomplete="off"></label>
+      <label>Email<input name="email" type="email"></label>
+      <label>Password<input name="password" type="password" required></label>
+    </div>
+    <label class="check"><input type="checkbox" required> I agree to the Terms & Conditions and Privacy Policy.</label>
+    <button class="btn" type="submit">Continue to payment</button>
+    <p id="formMessage" class="notice"></p>
+  </form>
+</section>
+
+<section id="login" class="section">
+  <p class="eyebrow">MEMBER AREA</p><h2>Login</h2>
+  <div class="login-box"><input placeholder="Email or phone"><input type="password" placeholder="Password"><button class="btn">Login</button><a href="#">Forgot password?</a></div>
+  <p class="muted">This starter package provides the UI. Connect the backend/database and a payment gateway before accepting real payments.</p>
+</section>
+
+<section id="privacy" class="section privacy">
+  <p class="eyebrow">PRIVACY</p><h2>Your sensitive details stay private</h2>
+  <ul><li>CNIC is not displayed on public profiles.</li><li>Phone number and email are not displayed to other members.</li><li>Exact address should never be shown publicly.</li><li>Only approved matrimonial information is public.</li><li>Admin access should be protected with strong authentication and role-based permissions.</li></ul>
+</section>
+</main>
+
+<footer><span>© 2026 NikahMatch</span><span>Terms • Privacy • Contact</span></footer>
+<script src="app.js"></script>
+</body>
+</html>
