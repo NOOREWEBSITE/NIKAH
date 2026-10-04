@@ -1,32 +1,12 @@
-# Backend specification
+# NikahMatch Admin Dashboard
 
-Recommended production stack: Node.js + Express + PostgreSQL (or another secure relational database).
+Demo login:
+Username: FAHAD786
+Password: Super9876@
 
-Required API areas:
-- POST /api/auth/register
-- POST /api/auth/login
-- POST /api/auth/forgot-password
-- POST /api/payments/create
-- POST /api/payments/webhook
-- GET /api/profiles (public-safe fields only)
-- POST /api/profiles/:id/like
-- DELETE /api/profiles/:id/like
-- GET /api/me/likes
-- GET /api/admin/users
-- PATCH /api/admin/users/:id/approve
-- PATCH /api/admin/users/:id/block
-- GET /api/admin/payments
-- GET /api/admin/likes
-- GET /api/admin/matches
+Open admin/login.html locally.
 
-Security requirements:
-1. Hash passwords with Argon2id or bcrypt.
-2. Encrypt sensitive data such as CNIC at rest where appropriate.
-3. Never return CNIC/phone/email from public profile endpoints.
-4. Use server-side authorization for every admin endpoint.
-5. Use HTTPS in production.
-6. Validate/sanitize all inputs.
-7. Rate-limit login, registration and password-reset endpoints.
-8. Store payment confirmation from a trusted gateway webhook, not from a client-submitted screenshot alone.
-9. Keep audit logs for admin access to sensitive records.
-10. Add CSRF protection where applicable.
+For your GitHub Pages site, copy the `admin` folder into the repository. The preview will then be at:
+`/NIKAH/admin/login.html`
+
+Important: this JavaScript login is only a demo. A real public matrimonial service needs server-side authentication, a database, HTTPS, payment verification and authorization before storing real CNIC/phone data.
