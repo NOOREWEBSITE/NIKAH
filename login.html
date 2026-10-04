@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Login — NikahMatch</title>
+<style>
+body{margin:0;font-family:system-ui,Arial;background:#f5f6fa;display:grid;place-items:center;min-height:100vh;color:#182033}
+.box{background:white;padding:32px;border-radius:18px;width:min(420px,88%);box-shadow:0 15px 45px #0001}
+h1{margin:0 0 8px}.muted{color:#667085}label{display:block;margin:16px 0 6px;font-weight:650}
+input{width:100%;padding:12px;box-sizing:border-box;border:1px solid #d8dce5;border-radius:9px}
+button{width:100%;margin-top:22px;padding:13px;border:0;border-radius:9px;background:#8b3d65;color:white;font-weight:700;cursor:pointer}
+.msg{margin-top:15px;font-weight:650}
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>Admin Login</h1>
+  <p class="muted">NikahMatch Administration</p>
+  <form id="login">
+    <label>Username</label><input id="user" autocomplete="username" required>
+    <label>Password</label><input id="pass" type="password" autocomplete="current-password" required>
+    <button>Login</button>
+    <div class="msg" id="msg"></div>
+  </form>
+</div>
+<script>
+const ADMIN_USER = "FAHAD786";
+const ADMIN_PASS = "Super9876@";
+document.getElementById("login").addEventListener("submit", e=>{
+  e.preventDefault();
+  const ok=document.getElementById("user").value===ADMIN_USER &&
+           document.getElementById("pass").value===ADMIN_PASS;
+  document.getElementById("msg").textContent=ok
+    ? "Login successful — connect this screen to the secure production Admin API."
+    : "Invalid username or password.";
+});
+</script>
+</body>
+</html>
