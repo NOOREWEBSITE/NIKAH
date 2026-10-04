@@ -2,8 +2,8 @@
 // NIKAH MATCH - SUPABASE CONNECT
 // ===============================
 
-const SUPABASE_URL = "https://nmrzbkgnvqukzfgtcfum.supabase.co/rest/v1/";
-const SUPABASE_KEY = "sb_publishable_9MVYA9UP2jn-22cnXePMqw_NSpx0kT5";
+const SUPABASE_URL ="https://nmrzbkgnvqukzfgtcfum.supabase.co/rest/v1/";
+const SUPABASE_KEY ="sb_publishable_9MVYA9UP2jn-22cnXePMqw_NSpx0kT5";
 
 // Load Supabase library
 const script = document.createElement("script");
